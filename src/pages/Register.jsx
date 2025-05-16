@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import AuthenticationForm from '../components/auth/AuthenticationForm';
 import { registerUser, selectRegisterErrorMessage } from '../store/features/userAuth/authSlice';
 import { useSelector } from 'react-redux';
+import Head from '../components/global/Head';
 
 const Register = () => {
   const [message,setMessage] = useState("");
@@ -9,6 +10,7 @@ const Register = () => {
 
   return (
     <>
+    < Head title="Books19 - Register" />
       <AuthenticationForm 
         action="Register"
         authHandler={registerUser}

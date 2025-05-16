@@ -8,11 +8,13 @@ import Footer from "../components/global/Footer";
 import { FaGlobeAfrica } from "react-icons/fa";
 import { IoIosRocket } from "react-icons/io";
 import { IoSearch } from "react-icons/io5";
+import Head from '../components/global/Head';
 
 
 function Home() {
   return (
    <> 
+   <Head title="Books19 - Homepage" />
     <main className="main-homepage">
       <Header />
       <section className="welcome-banner">

@@ -13,6 +13,7 @@ import {
   selectTotalPage,
  } from '../store/features/books/booksSlice';
 import CollectionWrapper from '../components/collection/CollectionWrapper';
+import Head from '../components/global/Head';
 
 
 function Collection() {
@@ -60,6 +61,7 @@ function Collection() {
 
   return (
     <>
+      <Head  title="Books19 - Collection" />
       <Header />
       <main className="collection-main">
           <section>
