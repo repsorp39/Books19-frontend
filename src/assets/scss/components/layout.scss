@@ -1,0 +1,142 @@
+/**
+------------------------------------
+---------- Header  -----------------
+------------------------------------
+**/
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  ul{
+    display: flex;
+    align-items: center;
+    gap: 25px;    
+  }
+
+  a{
+    color: $black;
+  }
+  
+  @media screen and (max-width:500px){
+    display: flex;
+    align-items:normal;
+    flex-direction: column;
+
+    ul{
+      display: flex;
+      flex-direction: column;
+      padding: 5px;
+      border-radius: 8px;
+      background-color: $black;
+
+      a{
+        color: $white;
+      }
+    }
+
+    .desktop-nav{
+      display: none;
+    }
+  }
+}
+
+  .logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .close-nav-btn {
+    display: none;
+
+    button{
+      @include stantard-btn;
+      background-color: $warning;
+      font-size: 25px;
+    }
+
+    @media screen and (max-width:500px) {
+      display: block;
+    }
+  }
+
+.logo img{
+  width: 150px;
+  margin-left: -22px;
+
+  @media screen and (max-width:500px){
+    width: 100px;
+  }
+}
+
+.btn-sign-in{
+  border-radius: 8px;
+  border: 2px solid black;
+  padding: 5px 8px;
+  background-color: $success;
+
+  &:hover{
+    background-color: $hover-sucess;
+  }
+}
+
+.sign-out{
+  button{
+    @include stantard-btn;
+    font-size: 16px;
+    padding: 7px 8px;
+    border: 2px solid;
+    background-color: $error;
+    white-space: nowrap;
+  }
+
+}
+
+
+/**
+------------------------------------
+---------- Footer  -----------------
+------------------------------------
+**/
+footer{
+  padding: 20px;
+  background-color: $black;
+  color: $white;
+  ul{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    text-align: center;
+  }
+
+  li{
+    width: 40px;
+    height: 40px;
+    place-content: center;
+    cursor: pointer;
+    border: 1px solid ;
+    border-radius: 50%;
+
+    @media screen and (max-width:500px){
+      width: 30px;
+      height: 30px;
+    }
+
+    &:hover{
+      color: gray;
+    }
+  }
+
+  svg{
+    display: block;
+    width: 20px;
+    margin: auto;
+  }
+
+  p{
+    margin-top: 30px;
+    font-size: 16px;
+    text-align: center;
+  }
+}

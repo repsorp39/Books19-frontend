@@ -1,0 +1,106 @@
+.auth-form{
+  place-content: center;
+  height: 100vh;
+
+  form{
+    width: 400px;
+    height: 420px;
+    margin: auto;
+    position: relative;
+    padding: 25px;
+    background-color: $white;
+    box-shadow: 5px 5px 30px rgb(180, 180, 230);
+
+    @media screen and (max-width:500px) {
+      width: 95%;
+    }
+
+  button{
+    @include stantard-btn;
+    display: block;
+    width: 100%;
+    background-color: $success;
+    font-family: $fontBold;
+    text-align: center;
+    border: 1px solid $white;
+
+    &:hover{
+      background-color: $hover-sucess;
+    }
+  }
+
+  }
+
+  h1{
+    font-family: $fontBold;
+    position: absolute;
+    top: 0;
+    right: 10px;
+  }
+
+  .form-head img{
+    width: 80px;
+    filter: invert(50%);
+  }
+
+  label{
+    display: block;
+    font-family: $fontSemiBold;
+  }
+
+  input{
+    width: 100%;
+    padding: 10px;
+    font-size: 17px;
+    font-family: $fontBold;
+    outline: none;
+  }
+
+  div{
+    margin-bottom: 15px;
+  }
+
+  svg{
+    display: block;
+    float: right;
+    font-size: 20px;
+    margin-right: 8px;
+    transform: translateY(-35px);
+  }
+
+  .form-error{
+    font-size: 15px;
+    color: $error;
+    transform: translateY(-30px);
+    text-align: center;
+  }
+
+  .alternative-signin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $fontBold;
+    gap: 15px;
+    margin-top: 30px;
+
+    button{
+      border: none;
+      background-color: inherit;
+      cursor: pointer;
+    }
+
+    img{
+      width: 35px;
+    }
+  }
+
+  .change-auth-form{
+    font-size: 14px;
+    text-align: center;
+    margin-top: 5px;
+    
+    a{
+      color: rgb(29, 105, 204);
+    }
+  }
+}

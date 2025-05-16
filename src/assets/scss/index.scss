@@ -1,0 +1,15 @@
+//settings
+@import "./base";
+
+//layout
+@import "./components/layout.scss";
+@import "./components/book-preview.scss";
+@import "./components/fallback-card.scss";
+
+
+//components
+@import "./components/form.scss";
+//pages
+@import "./pages/home.scss";
+@import "./pages/collection.scss";
+@import "./pages/pdf-reader.scss";

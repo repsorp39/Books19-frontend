@@ -1,0 +1,106 @@
+/**
+------------------------------------
+---------- COLORS  -----------------
+------------------------------------
+**/
+
+$brown:#fbc00a;
+$warning:#f0ad4e;
+$success:#4CAF50;
+$hover-sucess:#51bc55;
+$error:#ff3c28;
+$black:#222;
+$white: #fff;
+
+
+/**
+------------------------------------
+---------- FONTS  ------------------
+------------------------------------
+**/
+
+@font-face {
+    font-family: "NunitoBold";
+    src: url(../fonts/Nunito-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: "AvenirSemiBold";
+    src: url(../fonts/AvenirLTProBook.otf);
+}
+
+@font-face {
+    font-family: "NunitoRegular";
+    src: url(../fonts/Nunito-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Montsera";
+    src: url(../fonts/Montserrat-ExtraLight.ttf);
+}
+
+$fontBold: "NunitoBold";
+$fontSemiBold: "AvenirSemiBold";
+$fontRegular: "NunitoRegular";
+$fontMontsera: "Montsera";
+
+/**
+------------------------------------
+---------- GENERAL -----------------
+------------------------------------
+**/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 1.05em;
+    font-family: $fontRegular;
+
+    @media screen and (max-width:1000px){
+        font-size: 0.9em;
+    }
+}
+
+body{
+    min-height: 100vh;
+    width: 75%;
+    margin: auto;
+    background-color: $warning;
+
+    @media screen and (max-width:500px){
+        width: 90%;
+    }
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+@mixin title{
+    font-size: 2.4em;
+    font-family: $fontBold;
+
+    @media screen and (max-width:1100px) {
+        font-size: 2em;
+    }
+}
+
+@mixin stantard-btn{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-family: $fontSemiBold;
+    font-size: 1em;
+    border-radius: 10px;
+    border: 1px solid $white;
+    cursor: pointer;
+}

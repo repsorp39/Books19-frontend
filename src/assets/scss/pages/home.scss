@@ -1,0 +1,446 @@
+.main-homepage{
+  h1{
+    @include title;
+  }
+
+  h2{
+    @include title;
+    text-align: center;
+  }  
+}
+
+.welcome-banner{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  div:nth-child(1){
+    width: 50%;
+  }
+
+  p{
+    line-height: 35px;
+    font-size: 1.1em;
+  }
+}
+
+.features-list{
+  margin-bottom: 45px;
+  h2{
+    font-size: 2.4em;
+    font-family: $fontBold;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  h3{
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  article{
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    padding: 20px;
+
+    span{
+      display: block;
+      place-content: center;
+      width: 70px;
+      height: 70px;
+      font-size: 2em;
+      border-radius: 50%;
+      color: $white;
+      background-color: $black;
+      margin: auto;
+
+      &:hover{
+        background-color: $warning;
+      }
+    }
+  }
+
+  svg{
+    display: block;
+    width: 30px;
+    margin: auto;
+  }
+
+  div{
+    width: 300px;
+    height: 335px;
+    padding: 15px;
+    background-color: gainsboro;
+    border: 2px solid;
+    box-shadow: 2px 2px 2px $black;
+  }
+
+  div:nth-child(1){
+    transform: translateY(30px);
+  }
+
+  div:nth-child(3){
+    transform: translateY(-30px);
+  }
+}
+
+.review-wrapper{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 40px;
+  
+  img{
+    width: 100px;
+    border-radius: 50%;
+  }
+
+  @media screen and (max-width:900px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.review-card{
+    width: 250px;
+    height: 350px;
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    background-color: $white;
+    box-shadow: 1px 15px 13px rgb(75, 73, 73);
+
+  p{
+    font-family: $fontMontsera;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 900;
+  }
+
+   p svg{
+    display: block;
+      font-size: 45px;
+      color: yellow;
+    }
+
+    @media screen and (max-width:1060px) {
+      width: 200px;
+      height: 350px;
+      padding: 10px;
+
+      p svg{
+        font-size: 30px;
+      }
+    }
+
+    @media screen and (max-width:900px) {
+      width: 230px;
+    }
+
+  }
+.float-right{
+  float: right;
+}
+
+.categories-holder{
+  margin-bottom: 70px;
+
+  ul{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 15px;
+
+    @media screen and (max-width:500px) {
+      justify-content: center;
+      gap: 30px;
+    }
+  }
+
+  li{
+    width: 150px;
+    height: 170px;
+    margin-bottom: 50px;
+    position: relative;
+
+    &:hover{
+      h5{
+        opacity: 1;
+      }
+
+      strong{
+        opacity: 0;
+      }
+    }
+  }
+
+  img{
+    width: 100%;
+    border-radius: 8px;
+    height: 100%;
+    object-fit: center;
+  }
+
+  h5{
+    position: absolute;
+    font-size: 23px;
+    top:80px;
+    left: calc(150px/2 - 80px/2);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    color: gray;
+  }
+
+  strong{
+    display: block;
+    text-align: center;
+    font-size: 17px;
+    color: gray;
+    transition: all 0.5s ease-in-out;
+
+  }
+
+  @media screen and (max-width:500px) {
+    li{
+      width: 120px;
+      height: 120px;
+    }
+
+    h5{
+      display: none;
+    }
+  }
+}
+
+/**
+------------------------------------
+---------- About Page  -------------
+------------------------------------
+**/
+.about-us{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  margin-top: 50px;
+  margin-bottom: 55px;
+  font-size: 1.1em;
+  
+  div:nth-child(1){
+    width: 50%;
+  }
+  
+  h1{
+    @include title;
+    text-align: center;
+  }
+
+  p{
+    text-align: justify;
+  }
+
+  li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  li div:nth-child(1){
+    width: 60px;
+    height: 60px;
+    place-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-right: 25px;
+
+    span{
+      display: block;
+      margin: auto;
+      font-size: 1em;
+      font-family: $fontBold;
+      color: $white;
+      text-align: center;
+    }
+  }
+
+  h4{
+    font-family: $fontBold;
+    text-transform:capitalize;
+    font-weight: bold;
+  }
+
+  p{
+    font-weight: 200;
+  }
+
+  @media screen and (max-width:1200px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    p {
+    line-height: 30px;
+    }
+    div:nth-child(1){
+      width: 100%;
+    }
+    
+  }
+}
+
+.orange-form-1{
+  background-color:rgb(227, 83, 0);
+}
+
+.orange-form-2{
+  background-color:rgb(239, 61, 42);
+}
+
+.orange-form-3{
+  background-color:rgb(229, 1, 1);
+}
+
+.orange-form-4{
+  background-color:rgb(231, 9, 9);
+}
+
+/**
+------------------------------------
+---------- Contact form  -----------
+------------------------------------
+**/
+.contact-form{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 75%;
+  margin: 70px auto ;
+
+  @media screen and (max-width:1150px) {
+    width: 100%;
+  }
+
+  @media screen and (max-width:875px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+
+    img{
+      width: 170px;
+    }
+  }
+
+  h3{
+    @include title;
+    text-align: center;
+  }
+
+  img{
+    width: 300px;
+  }
+
+  label{
+    display: block;
+  }
+
+  form section{
+    display: flex;
+    gap: 25px;
+  }
+
+  form div{
+    margin-bottom: 25px;
+  }
+
+  input,textarea{
+    width: 100%;
+    padding: 10px;
+    resize: none;
+    outline: none;
+  }
+
+  button{
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: $fontBold;
+    background-color: $success;
+    cursor: pointer;
+    &:hover{
+      background-color: $hover-sucess;
+    }
+  }
+}
+
+@media screen and (max-width:1100px) {
+/*---------- Responsive Welcome banner ---------*/
+
+  .welcome-banner{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 35px;
+
+    div:nth-child(1){
+      width: 100%;
+      order: 2;
+    }
+  
+    p{
+      line-height: 35px;
+      font-size: 1.1em;
+      text-align: center;
+    }
+
+    h1{
+      text-align: center;
+    }
+  }
+ 
+}
+
+
+@media screen and (max-width:500px) {
+  .welcome-banner{
+    img{
+      width: 280px;
+    }
+  }
+}
+
+@media screen and (max-width:1200px) {
+  .features-list{
+    div{
+      width: 250px;
+      font-size: 0.9em;
+      text-align: center;
+    }
+
+  }
+}
+
+@media screen and (max-width:830px) {
+  .features-list{
+    article{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    div{
+      height: 300px;
+      margin-bottom: 30px;
+    }
+
+  }
+}

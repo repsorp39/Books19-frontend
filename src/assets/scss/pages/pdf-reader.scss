@@ -1,0 +1,22 @@
+.back-to-home button {
+    @include stantard-btn;
+    padding: 8px;
+    border-radius: 5px;
+    margin: 10px;
+    color: $white;
+    background-color: $black;
+}
+
+.pdf-reader{
+    h1{
+        font-size: 2.1em;
+        font-weight: bold;
+        text-align: center;
+        font-family: $fontSemiBold;
+
+        @media screen and (max-width:500px) {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+        }
+    }
+}
