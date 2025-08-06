@@ -28,8 +28,7 @@ const reviewsCard = reviews.map((review,index) =>{
           <span> <img src={review.picture} alt={review.username} /> </span>
           <h4> { review.username } </h4>
           <p>
-          <ImQuotesLeft />
-            { review.content }<ImQuotesRight  className="float-right"/>
+             <ImQuotesLeft /> { review.content }<ImQuotesRight  className="float-right"/>
           </p>
        </div>
   </li>

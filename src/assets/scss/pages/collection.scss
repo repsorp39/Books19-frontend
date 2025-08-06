@@ -24,6 +24,10 @@
   border-radius: 8px;
   background-color: $success;
 
+  &:empty{
+    display: none;
+  }
+
   @media screen and (max-width:700px) {
     display: none;
   }

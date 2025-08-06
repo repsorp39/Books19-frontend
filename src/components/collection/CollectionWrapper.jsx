@@ -10,12 +10,14 @@ function CollectionWrapper({books}) {
     <section className="collection-wrapper">
       <ul  className="book-preview">
       {
-        books.map((book) => <SingleBook 
+        books.map((book) => ( 
+        <SingleBook 
           key={book.id}  
           book={book}
           setCurrentBookToDisplay={setCurrentBookToDisplay}
           currentBookToDisplay={currentBookToDisplay}
         />)
+      )
       }
       </ul>
     </section>
